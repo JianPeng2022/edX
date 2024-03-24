@@ -46,3 +46,22 @@ Overall, **Podman**'s architecture offers a secure and user-friendly alternative
 **Enforcing consistency and control**: Container orchestration platforms can help to enforce consistency and control over containerized applications. This is important for ensuring that applications are deployed in a consistent manner and that they meet security and compliance requirements.
 
 **Enabling multi-cloud deployments**: Container orchestration platforms can enable multi-cloud deployments, where applications are deployed across multiple cloud providers. This can provide greater flexibility and resilience, as well as reduce reliance on any single vendor.
+
+Which of the following Linux kernel features makes running a process in isolation possible?
+- virtualspace
+- userspace
+- **namespace**
+- containerspace
+
+Docker Hub is a type of 
+- Repository
+- SCM (Supply Chain Management)
+- Orchestration engine
+- **Registry**
+
+Which of the following features are provided by Kubernetes directly? Select all answers that apply.
+- Service mesh
+- **Availability**
+- Networking
+- **Scalability**
+
