@@ -1,4 +1,4 @@
-# Introduction to Cloud?
+# 02 Introduction to Cloud?
 ## What is the Cloud? Why Should You Bother?
 The cloud is not an elusive fortress in the sky; it's a virtual space, a digital playground where data finds its home. Instead of hoarding information on your personal devices, the cloud allows you to offload it to powerful servers that float, metaphorically, in this digital sky. These servers are not tied to a physical location; they are dispersed worldwide, forming a network that operates seamlessly.  
 
