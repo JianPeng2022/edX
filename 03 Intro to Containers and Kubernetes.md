@@ -1,0 +1,2 @@
+# 03 Introduction to Containers and Kubernetes
+Imagine a container as a standardized box that holds everything your application needs to run - its code, libraries, runtime environment, and system configuration. Unlike virtual machines, which virtualize the entire hardware stack, containers share the underlying operating system (OS) with other containers, making them much more lightweight and efficient.
