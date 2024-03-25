@@ -1,1 +1,4 @@
+# 05 Continuous Integration (CI) Continuous Delivery/Continuous Deployment (CD) 
+**Continuous Integration (CI)** is a software development practice focused on regularly merging code modifications from development teams into a central repository. Its primary objective is to identify and resolve integration problems at an early stage of the development cycle and it emphasizes frequent code integration, automated building and testing procedures.
+**Continuous Delivery (CD)** is a software development practice that aims to automate the process of releasing software changes to production environments in a frequent and reliable manner. It builds upon the concept of Continuous Integration (CI) by extending the automated pipeline to include deployment and release processes. In continuous delivery, the goal is to have software in a state where it can be released to production at any given time.
 
