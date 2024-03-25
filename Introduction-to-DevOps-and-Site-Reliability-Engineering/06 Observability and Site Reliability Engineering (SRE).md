@@ -46,3 +46,49 @@ Infrastructure Monitoring:
 Cloud Native Observability:
 - AWS CloudWatch: Amazon's monitoring and observability service for AWS resources. It provides metrics, logs, and traces for AWS services and applications.
 - Azure Monitor: Microsoft Azure's observability service, offering insights into the performance and health of applications and infrastructure on the Azure platform.
+
+# 07 Site Reliability Engineering (SRE)
+Site Reliability Engineering (SRE) is an approach to running large-scale, reliable services. Google is widely credited with formalizing and popularizing the term "SRE" and has since been adopted by many other tech companies. SRE blends aspects of software engineering with traditional IT and focuses on creating scalable and highly reliable software systems. The primary focus of SRE is to improve the reliability of services. Reliability is often measured through service level indicators (SLIs), service level objectives (SLOs), and service level agreements (SLAs).
+- Focus on Reliability: SRE places a primary emphasis on ensuring the reliability and availability of services. SREs are specifically tasked with maintaining a high level of service reliability and meeting defined Service Level Objectives (SLOs).
+- Error Budgets: SRE introduces the concept of error budgets, which quantifies the allowable amount of downtime or errors within a specific timeframe. This allows for a balance between reliability and innovation, as long as the error budget is not exhausted.
+- Measurable Objectives: SREs set measurable objectives, such as SLOs and Service Level Indicators (SLIs), to quantify the performance and reliability of systems. These metrics guide decision-making and help prioritize efforts.
+- Blame-Free Post-Mortems: SREs adopt a blame-free culture when responding to incidents. Post-mortem analyses are conducted to understand the root causes of issues and to implement preventative measures for the future.
+- Automation: Automation is a core principle of SRE. SREs leverage automation to handle routine operational tasks, enabling them to focus on strategic improvements and proactive measures.
+## Measuring Reliability with SLIs
+Measuring reliability is a crucial aspect of SRE; and one of the key tools used for this is Service Level Indicators (SLIs). SLIs are specific, quantitative metrics that define the performance and reliability of a service. They are typically expressed as a ratio, percentage, or a specific numerical value. SLIs represent the aspects of a service that are most critical to its users. Selecting the right SLIs is crucial. They should align with user expectations and business goals. For example, latency might be a critical SLI if users value a fast response time, the time it takes for a request to be processed.
+
+SLIs in Action:
+- Monitoring: Use monitoring tools to continuously collect data on SLIs. For example, monitor the response time of API calls to calculate latency.
+- Alerting: Set up alerts based on SLIs to notify teams when performance deviates from the defined objectives. If latency exceeds the acceptable threshold, it triggers an alert for investigation.
+- Analysis and Improvement: Conduct regular analysis on SLI data to identify patterns and areas for improvement. If SLIs indicate an increase in errors, it might prompt a code review or optimization efforts.
+## Embracing Risks with SLOs and Error Budgets
+In SRE, embracing risks is an inherent part of the approach, and it's managed through the concepts of Service Level Objectives (SLOs) and error budgets.  
+**SLOs** are specific, measurable targets that define the acceptable level of reliability for a service. They are expressed as a percentage or ratio and represent the agreed-upon performance level that a service should achieve. SLOs allow teams to set realistic goals based on user expectations and business requirements. For example, an SLO for availability might be set at 99.9%, indicating that the service should be available 99.9% of the time. SLOs provide a clear metric for measuring the success of a service. If the service consistently meets or exceeds its SLOs, it is considered reliable. **Error budgets** are closely tied to SLOs and represent the allowed amount of errors or downtime within a specified timeframe. The error budget is essentially the inverse of the SLO. For example, if the SLO for availability is 99.9%, the error budget allows for 0.1% downtime.
+
+## Service Level Agreements (SLAs)
+An SLA is a formal contract between a service provider and its customers, outlining the expected level of service. It defines the agreed-upon quality of service, including performance metrics, availability, and support expectations. In Site Reliability Engineering (SRE), a Service Level Agreement (SLA) plays a crucial role in managing expectations and ensuring a service meets user needs.  
+
+Scenario: An e-commerce company relies on a critical service called "Product Catalog" to display product information to customers. The SRE team is responsible for ensuring the reliability of this service.
+- SLI (Service Level Indicator): Uptime percentage of the Product Catalog service.
+- SLO (Service Level Objective): The SLO for uptime could be set at 99.95% over a month. This means the service can be unavailable for a maximum of 43.8 minutes per month (0.05% of the total time).
+- SLA (Service Level Agreement): The SLA would be a formal agreement between the SRE team and the e-commerce business stakeholders. It would outline the following the agreed-upon SLO for uptime (99.95%) and the consequences of missing the SLO. For instance, the SLA might specify a service credit for the business team if the uptime falls below 99.95% in a month. This credit could be used to offset the cost of the service due to the downtime.
+
+## The 7 Principles of SRE
+Embracing Risk: SREs aim to identify the acceptable level of risk and manage it appropriately. No system is ever truly perfect. SRE acknowledges that there will be failures and focuses on minimizing their impact and ensuring fast recovery.
+
+Service Level Objectives (SLOs): A core principle of site reliability engineering (SRE) is the move towards well-defined and well-designed service levels. SLOs define the target level of reliability for a service. They are specific, measurable goals that represent the acceptable level of performance. SLOs provide a clear understanding of user expectations and guide the team in maintaining the desired level of service reliability. In other words, it's not just about setting goals, it's about setting the right goals that effectively measure performance.
+
+Simplicity: In SRE, simplicity reigns supreme. Complex systems are like intricate puzzles – prone to errors, challenging to troubleshoot, and demanding in terms of maintenance. Simple systems are easier to manage and adjust, less complexity means quicker fixes and smoother operations, effortless to test and monitor; clearer insights translate to faster problem identification and resolution. Less prone to errors means fewer moving parts reduce the risk of malfunctions. This focus on simplicity translates to a core SRE goal: uneventful operations.
+
+Toil Automation: Toil refers to repetitive, manual operational work that does not contribute to the overall stability or improvement of a system. SREs aim to automate toil wherever possible, freeing up time for strategic, high-impact work. Automation reduces errors and allows teams to focus on value-added tasks.
+
+Monitoring and Alerting: Effective monitoring and alerting are crucial for identifying and responding to issues promptly. SREs use monitoring tools to collect data on the performance and health of services. Alerts are set up to notify teams when predefined thresholds are breached, enabling quick responses to incidents.
+
+Capacity Planning: Capacity planning involves forecasting usage patterns and ensuring that systems can handle current and future loads. SREs aim to prevent both over-provisioning and under-provisioning of resources, striking a balance to ensure optimal system performance and reliability.
+
+Emergency Response and Blameless Postmortems: SREs are equipped to respond rapidly and effectively to incidents. The focus is on minimizing downtime and restoring service functionality. A blame-free post-mortem culture is embraced, allowing teams to learn from incidents and implement improvements to prevent future occurrences. Instead of focusing solely on fault-finding, incident reviews (often called postmortems) aim to identify the root cause of problems with a different approach. This shift in perspective is reflected in the name itself - a postmortem is less accusatory than a traditional "root cause analysis" (RCA). The goal is to learn from mistakes and improve the system, not to point fingers. Postmortems go beyond just identifying the root cause. They also ask crucial questions about how to better detect, respond to, and fix issues faster. This focus on improving response is often a challenge for organizations used to traditional blame-oriented RCAs. Building a "blameless culture" where learning is prioritized is key to getting the most out of postmortem.
+
+Which of the following will help balance release velocity with system reliability? (Select all answers that apply)
+- **SLOs**
+- **Error budget**
+- SLAs
