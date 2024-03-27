@@ -7,3 +7,9 @@ Which of the following characteristics does not apply to functions?
 - Stateless
 - **Must run on Kubernetes**
 - Isomorphic
+Which of the following are attributes of FaaS?
+Paying for consumption
+- **A focus on the developer experience**
+- Needing Kubernetes
+- **Auto-scaling**
+- Portability between clouds
