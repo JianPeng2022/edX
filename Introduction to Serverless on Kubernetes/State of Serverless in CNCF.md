@@ -8,4 +8,5 @@ Our bare essentials for Serverless on Kubernetes are:
 - A registry to host the container image.
 - A Pod to run the container image.
 - A Service to access the Pod.
+  
 Often, projects will add many more components on top of this stack, such as a UI, and API gateway, Ingress automation, auto-scaling, APIs, and many more.
